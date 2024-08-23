@@ -1,0 +1,434 @@
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+html, first {
+    height: 800px;
+    margin: 0;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.first {
+    background: url('Background.png.webp') no-repeat center center;
+    background-size:auto; /* Ensure the image covers the entire background */
+    background-attachment: scroll; /* Make sure the background scrolls with the content */
+    height: 800px;
+    width: 100%;
+}
+.first::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background: #040e279c;
+    z-index: 1; 
+    pointer-events: none;
+}                                               
+
+
+ .first .navbar {
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1000;
+}
+.navbar-heading {
+    font-family: sans-serif;
+    position: absolute; /* Position it absolutely within the navbar */
+    top: 400px; /* Adjust as needed */
+    left: 30%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center it */
+    font-size: 4rem; /* Adjust font size as needed */
+    color: #fff; /* White text color */
+    text-align: left;
+    z-index: 10; /* Ensure it's above other content */
+    padding: 0.5rem; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: Rounded corners */
+    width: 600px;
+    animation: slideInUp 1s ease-out;
+  }
+  .navbar-button .work {
+    border: 2px solid #33D4D6;
+    color: white;
+    background-color: #33D4D6;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: sans-serif;
+    position: absolute;
+    top: 600px; 
+    left: 14%; 
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 50px;
+    animation: slideInUp 1s ease-out;
+  }
+  .navbar-button .work:hover{
+    background-color: transparent;
+    color: #33D4D6;
+  }
+  .navbar-heading2 {
+    display: none;
+  }
+.navbar-brand img {
+    max-width: 100%; /* Ensure the logo scales with the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjust the positioning of the logo */
+.navbar .navbar-brand {
+    margin-left: 0; /* Reset margin for better positioning */
+}
+.navbar-nav .nav-link {
+    font-family: sans-serif;
+    margin-right: 5px;
+    color: white !important;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    font-size: 13px;
+    font-weight: bold;
+}
+.navbar .navbar-brand{
+    margin-left: -60px;
+}
+.navbar-nav .nav-link:hover {
+    color: #33D4D6 !important;
+}
+
+
+
+.contact-number {
+    font-family: sans-serif;
+    margin-right: 20px;
+    font-size: 14px;
+    color: white;
+}
+.contact-number i{
+    color: #33D4D6;
+}
+
+.apply-btn {
+    border: 2px solid #33D4D6;
+    color: #33D4D6;
+    background-color: transparent;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #33D4D6;
+    color: white;
+}
+.nav-item.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 160px;
+    animation: slideInUp 1s ease-out;
+  }
+  
+  .dropdown-menu a {
+    font-family: sans-serif;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Show dropdown on hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Optional: for smooth transitions */
+  .dropdown-menu {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+  }
+  .navbar-form {
+    animation: slideInUp 1s ease-out;
+    position: absolute;
+    top: 300px;
+    right: 15%;
+    height: auto;
+    width: 400px;
+    z-index: 10;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.navbar-form h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.navbar-form p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.navbar-form select {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+}
+.navbar-form .options{
+    color: gray;
+}
+.navbar-form h6{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    color: gray;
+    font-weight: normal;
+    margin-left: 6px;
+}
+.navbar-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #33D4D6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-form button:hover {
+    background-color: #33D4D6;
+}
+.work-button{
+        margin-top: 100px;
+}
+@media (max-width: 600px) {
+    
+    .navbar .navbar-brand {
+        margin-left: 0;
+    }
+
+    .navbar-brand img {
+        max-width: 100px;
+    }
+    .navbar-nav {
+        background-color: rgba(255, 255, 255, 0.493);
+    }
+    .navbar-heading {
+        display: none;
+      }
+      .navbar-button .work{
+        display: block;
+        margin-top: -400px;
+        margin-left: 140px;
+        width: auto;
+        height: auto;
+    }
+      .navbar-heading2 {
+        animation: slideInUp 1s ease-out;
+        font-family: sans-serif;
+        color: white;
+        display: block;
+        margin-top: 20px;
+        width: auto;
+        font-size: 26px;
+        text-align: center;
+
+      }
+      
+    .apply-btn {
+        background-color: #33D4D6;
+        color: white;
+    }
+
+    .apply-btn:hover {
+        background-color: #33D4D6;
+        color: lightgray;
+    }
+    
+    .contact-number {
+        display: none;
+    }
+
+    .apply-btn {
+        display: none;
+    }
+}
+@media (max-width: 1080px) {
+    
+   .navbar .navbar-brand {
+        margin-left: 0;
+    }
+
+
+    .navbar-nav {
+        background-color: rgba(255, 255, 255, 0.493);
+    }
+    .navbar-heading {
+        text-align: left;
+        width: auto;
+        margin-left: 3%;
+        font-size: 3rem;
+        margin-top: -40px;
+      }
+    .apply-btn {
+        background-color: #33D4D6;
+        color: white;
+    }
+
+    .apply-btn:hover {
+        background-color: #33D4D6;
+        color: lightgray;
+    }
+    
+    .contact-number {
+        display: none;
+    }
+
+    .apply-btn {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1080px) {
+    .navbar-form {
+        top: 150px;
+        right: 5%;
+        width: 300px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-form {
+        margin-top: 100px;
+        right: 2%;
+        width: 260px;
+        padding: 15px;
+    }
+    .navbar-heading{
+        font-size: 2.5rem;  
+        margin-top: 10px;    
+    }
+    .navbar-form p,
+    .navbar-form select,
+    .navbar-form button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-form {
+        top: 200px;
+        width: 90%;
+        padding: 10px;
+
+    }
+
+    .navbar-form h4 {
+        font-size: 18px;
+    }
+
+    .navbar-form p,
+    .navbar-form select,
+    .navbar-form button {
+        font-size: 12px;
+    }
+}
+
+.navbar-form h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.navbar-form p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.navbar-form select {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+}
+
+.navbar-form .options {
+    color: gray;
+}
+
+.navbar-form h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    color: gray;
+    font-weight: normal;
+    margin-left: 6px;
+}
+
+.navbar-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #33D4D6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-form button:hover {
+    background-color: #2bb0b1;
+}
+

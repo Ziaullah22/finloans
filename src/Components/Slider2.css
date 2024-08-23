@@ -1,0 +1,239 @@
+.slider {
+    margin-top: 100px;
+    display: flex;
+    overflow-x: hidden;
+    width: 1000px; /* adjust the width to fit your needs */
+    height: 300px; /* adjust the height to fit your needs */
+    margin-left: 150px;
+  }
+  
+  .slider img {
+    width: 30%; /* adjust the width to fit your needs */
+    height: 30%; /* adjust the height to fit your needs */
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider {
+    margin-top: 100px;
+    display: flex;
+    overflow-x: hidden;
+    width: 100%; /* Use full width for responsiveness */
+    height: auto; /* Adjust height based on content */
+    margin-left: 0; /* Remove margin for smaller screens */
+}
+
+.slider img {
+    width: 100%; /* Make images responsive to container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease-in-out;
+}
+.background-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background-image: url('loan.png.webp'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .background-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: #040e279c;
+    z-index: 1; 
+    pointer-events: none;
+}
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    color: white;
+    margin-left: -200px;
+    display: inline-flex;
+}
+
+.content h1 {
+    font-family: sans-serif;
+    font-size: 44px; /* Adjust font size as needed */
+    margin-bottom: 20px;
+    width: 700px;
+}
+
+.apply-button {
+    background-color: #33D4D6; /* Button background color */
+    border: 1px solid #33D4D6;
+    color: white;
+
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+    margin-top: 80px;
+}
+
+.apply-button:hover {
+    background-color: transparent; /* Button hover color */
+    color: #33D4D6;
+}
+/* Media Queries for Different Screen Sizes */
+
+/* For screens 1200px and up */
+@media (min-width: 1200px) {
+    .slider {
+        width: 1000px; /* Adjust width for larger screens */
+    }
+    .slider img {
+        width: 30%; /* Adjust image width for larger screens */
+    }
+}
+
+/* For screens between 992px and 1199px */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .slider {
+        width: 80%; /* Adjust width for medium-large screens */
+    }
+    .slider img {
+        width: 25%; /* Adjust image width for medium-large screens */
+    }
+}
+
+/* For screens between 768px and 991px */
+@media (max-width: 991px) and (min-width: 768px) {
+    .slider {
+        width: 90%; /* Adjust width for medium screens */
+    }
+    .slider img {
+        width: 33.33%; /* Adjust image width for medium screens */
+    }
+}
+
+/* For screens between 600px and 767px */
+@media (max-width: 767px) and (min-width: 600px) {
+    .slider {
+        width: 100%; /* Full width for smaller screens */
+    }
+    .slider img {
+        width: 50%; /* Adjust image width for smaller screens */
+    }
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 599px) {
+    .slider {
+        width: 100%; /* Full width for extra small screens */
+        margin-top: 0;
+    }
+    .slider img {
+        width: 50%; /* Full width images for extra small screens */
+
+    }
+}
+@media (min-width: 1200px) {
+    .background-section {
+        height: 400px; /* Adjust height for larger screens */
+    }
+    .content h1 {
+        font-size: 44px; /* Adjust font size for larger screens */
+        width: 700px; /* Adjust width for larger screens */
+    }
+    .apply-button {
+        width: 150px; /* Adjust button width for larger screens */
+        height: 50px; /* Adjust button height for larger screens */
+    }
+}
+
+/* For screens between 992px and 1199px */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .background-section {
+        height: 400px; /* Adjust height for medium-large screens */
+    }
+    .content h1 {
+        font-size: 40px; /* Adjust font size for medium-large screens */
+        width: 600px; /* Adjust width for medium-large screens */
+    }
+    .apply-button {
+        width: 140px; /* Adjust button width for medium-large screens */
+        height: 45px; /* Adjust button height for medium-large screens */
+    }
+}
+
+/* For screens between 768px and 991px */
+@media (max-width: 991px) and (min-width: 768px) {
+    .background-section {
+        height: 400px; /* Adjust height for medium screens */
+    }
+    .content{
+        margin-left: 0;
+    }
+    .content h1 {
+        font-size: 36px; /* Adjust font size for medium screens */
+        width: 500px; /* Adjust width for medium screens */
+    }
+    .apply-button {
+        width: 130px; /* Adjust button width for medium screens */
+        height: 50px; /* Adjust button height for medium screens */
+        margin-top: 10px;
+    }
+}
+
+/* For screens between 600px and 767px */
+@media (max-width: 767px) and (min-width: 600px) {
+    .background-section {
+        height: 300px; /* Adjust height for extra small screens */
+    }
+    .background-section::before {
+        height: 300px;
+    }
+    .content {
+        margin-top: 50px;
+        margin-left: 0; /* Remove left margin for extra small screens */
+        text-align: center; /* Center-align content for extra small screens */
+        display: block;
+    }
+    .content h1 {
+        font-size: 28px; /* Adjust font size for extra small screens */
+        width: 100%; /* Full width for extra small screens */
+        padding: 0 10px; /* Add padding for extra small screens */
+    }
+    .apply-button {
+        width: 120px; /* Adjust button width for extra small screens */
+        height: 70px; /* Adjust button height for extra small screens */
+        margin-top: -0px;
+    }
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 599px) {
+    .background-section {
+        height: 300px; /* Adjust height for extra small screens */
+    }
+    .background-section::before {
+        height: 300px;
+    }
+    .content {
+        margin-top: 50px;
+        margin-left: 0; /* Remove left margin for extra small screens */
+        text-align: center; /* Center-align content for extra small screens */
+        display: block;
+    }
+    .content h1 {
+        font-size: 28px; /* Adjust font size for extra small screens */
+        width: 100%; /* Full width for extra small screens */
+        padding: 0 10px; /* Add padding for extra small screens */
+    }
+    .apply-button {
+        width: 120px; /* Adjust button width for extra small screens */
+        height: 70px; /* Adjust button height for extra small screens */
+        margin-top: -0px;
+    }
+}

@@ -1,0 +1,135 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .header {
+    background-color: whitesmoke;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .logo img {
+    max-width: 150px; /* Adjust the size as needed */
+  }
+  
+  .links-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 20px 0;
+  }
+  
+  .links-section > div {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .links-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .links-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links-section ul li {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .subscribe input {
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .subscribe button {
+    padding: 10px 20px;
+    background-color: #33D4D6;
+    color: white;
+    border: 1px solid #33D4D6;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  .subscribe button:hover{
+    background-color: transparent;
+    color: #33D4D6;
+  }
+  .subscribe p {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .contact-info {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .social-icons {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    color: #555;
+    font-size: 20px;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+  }
+  
+  .footer p {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .footer span {
+    color: red;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .links-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .links-section > div {
+      margin: 10px 0;
+    }
+  }
+  

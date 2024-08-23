@@ -1,0 +1,144 @@
+.slider-container {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Use full width to adapt to various screen sizes */
+  max-width: 1100px; /* Maximum width for larger screens */
+  margin: 0 auto;
+  position: relative; 
+  padding: 0 20px; /* Padding to ensure content is not too close to edges */
+  margin-top: 100px;
+}
+
+.slider-button {
+  background-color: #b9e7eede;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #339ad6; /* Button icon color */
+  z-index: 1;
+  width: 50px; /* Width of the circle */
+  height: 50px; /* Height of the circle */
+  border-radius: 50%; /* Make the button circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;  
+  width: 100%;
+  max-width: 1000px; /* Maximum width for slider content */
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.worker-description {
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+}
+
+.worker-name {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+  .slider-container {
+    padding: 0 15px; /* Reduce padding for smaller screens */
+  }
+  .slider-content {
+    max-width: 900px; /* Adjust max-width for slightly smaller screens */
+  }
+  .profile-image {
+    width: 180px; /* Smaller profile image */
+    height: 180px;
+  }
+  .worker-description {
+    font-size: 0.95rem; /* Slightly smaller text */
+  }
+}
+
+@media (max-width: 992px) {
+  .slider-container {
+    padding: 0 10px; /* Further reduce padding */
+  }
+  .slider-content {
+    max-width: 800px; /* Adjust max-width for smaller screens */
+  }
+  .profile-image {
+    width: 150px; /* Smaller profile image */
+    height: 150px;
+  }
+  .worker-description {
+    font-size: 0.9rem; /* Smaller text */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 0 5px; /* Minimal padding */
+  }
+  .slider-content {
+    flex-direction: column; /* Stack items vertically on small screens */
+    max-width: 100%; /* Ensure it fits within the viewport */
+  }
+  .profile-image {
+    width: 120px; /* Smaller profile image */
+    height: 120px;
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add margin below */
+  }
+  .worker-description {
+    font-size: 0.85rem; /* Smaller text */
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-button {
+    width: 40px; /* Smaller button */
+    height: 40px;
+    font-size: 1.5rem; /* Adjust font size */
+  }
+  .profile-image {
+    width: 100px; /* Smaller profile image */
+    height: 100px;
+  }
+  .worker-description {
+    font-size: 0.8rem; /* Smaller text */
+  }
+}
+
+@media (max-width: 387px) {
+  .slider-button {
+    width: 35px; /* Even smaller button */
+    height: 35px;
+    font-size: 1.2rem; /* Adjust font size */
+  }
+  .profile-image {
+    width: 80px; /* Smaller profile image */
+    height: 80px;
+  }
+  .worker-description {
+    font-size: 0.75rem; /* Smaller text */
+  }
+}

@@ -1,0 +1,299 @@
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+html, second {
+    height: 300px;
+    margin: 0;
+    position: relative;
+    font-family: sans-serif;
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .hide {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+.second {
+    background: url('Background.png.webp') no-repeat center center;
+    background-size:cover; /* Ensure the image covers the entire background */
+    background-attachment: scroll; /* Make sure the background scrolls with the content */
+    height: 450px;
+    width: 100%;
+}    
+.second::before {
+    content: ''; /* Necessary to create the pseudo-element */
+    position: absolute; /* Position it absolutely within the .second element */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    background: #040e279c; /* Black with 50% opacity */
+    z-index: 1; /* Ensure it's below the content but above the background */
+    pointer-events: none; /* Prevent interaction with this layer */
+}
+
+/* Ensure other content remains above the overlay */
+.second .navbar,
+.second .navbar-heading,
+.second .navbar-button,
+.second .navbar-heading2,
+.second .contact-number,
+.apply-btn,
+.nav-item.dropdown,
+.dropdown-menu {
+    position: relative;
+    z-index: 2; /* Ensure these elements are above the overlay */
+}                                          
+.second .navbar {
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1000;
+}
+.second .navbar-heading {
+    font-family: sans-serif;
+    position: absolute; /* Position it absolutely within the navbar */
+    top: 400px; /* Adjust as needed */
+    left: 30%; /* Adjust as needed */
+    transform: translate(-50%, -50%); /* Center it */
+    font-size: 4rem; /* Adjust font size as needed */
+    color: #fff; /* White text color */
+    text-align: left;
+    z-index: 10; /* Ensure it's above other content */
+    padding: 0.5rem; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: Rounded corners */
+    width: 600px;
+    animation: slideInUp 1s ease-out;
+    margin-top: -140px;
+  }
+  .second .navbar-button .work {
+    border: 2px solid #33D4D6;
+    color: white;
+    background-color: #33D4D6;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: sans-serif;
+    position: absolute;
+    top: 600px; 
+    left: 14%; 
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 50px;
+    animation: slideInUp 1s ease-out;
+  }
+  .second .navbar-button .work:hover{
+    background-color: transparent;
+    color: #33D4D6;
+  }
+  .second .navbar-heading2 {
+    display: none;
+  }
+  .second .navbar-brand img {
+    max-width: 100%; /* Ensure the logo scales with the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjust the positioning of the logo */
+.second .navbar .navbar-brand {
+    margin-left: 0; /* Reset margin for better positioning */
+}
+.second .navbar-nav .nav-link {
+    font-family: sans-serif;
+    margin-right: 5px;
+    color: white !important;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    font-size: 13px;
+    font-weight: bold;
+}
+.navbar .navbar-brand{
+    margin-left: -60px;
+}
+.second .navbar-nav .nav-link:hover {
+    color: #33D4D6 !important;
+}
+
+
+
+.second .contact-number {
+    font-family: sans-serif;
+    margin-right: 20px;
+    font-size: 14px;
+    color: white;
+}
+.second .contact-number i{
+    color: #33D4D6;
+}
+
+.apply-btn {
+    border: 2px solid #33D4D6;
+    color: #33D4D6;
+    background-color: transparent;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #33D4D6;
+    color: white;
+}
+.nav-item.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 160px;
+    animation: slideInUp 1s ease-out;
+  }
+  
+  .dropdown-menu a {
+    font-family: sans-serif;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Show dropdown on hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Optional: for smooth transitions */
+  .dropdown-menu {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+  }
+
+@media (max-width: 600px) {
+    
+    .navbar .navbar-brand {
+        margin-left: 0;
+    }
+
+    .navbar-brand img {
+        max-width: 100px;
+
+    }
+    .navbar-nav {
+        background-color: rgba(255, 255, 255, 0.493);
+    }
+    .second .navbar-heading {
+        display: none;
+      }
+      .navbar-button .work{
+        display: block;
+        margin-top: -400px;
+        margin-left: 140px;
+        width: auto;
+        height: auto;
+    }
+      .second .navbar-heading2 {
+        animation: slideInUp 1s ease-out;
+        font-family: sans-serif;
+        color: white;
+        display: block;
+        margin-top: 30px;
+        width: auto;
+        font-size: 40px;
+        font-weight: bold;
+        margin-left: 30%;
+      }
+      
+    .apply-btn {
+        background-color: #33D4D6;
+        color: white;
+    }
+
+    .apply-btn:hover {
+        background-color: #33D4D6;
+        color: lightgray;
+    }
+    
+    .contact-number {
+        display: none;
+    }
+
+    .apply-btn {
+        display: none;
+    }
+}
+@media (max-width: 1080px) {
+    
+   .navbar .navbar-brand {
+        margin-left: 0;
+    }
+
+
+    .navbar-nav {
+        background-color: rgba(255, 255, 255, 0.493);
+    }
+    .second .navbar-heading {
+        text-align: left;
+        width: auto;
+        margin-left: -10%;
+        font-size: 3rem;
+        margin-top: -60px;
+      }
+    .apply-btn {
+        background-color: #33D4D6;
+        color: white;
+    }
+
+    .apply-btn:hover {
+        background-color: #33D4D6;
+        color: lightgray;
+    }
+    
+    .contact-number {
+        display: none;
+    }
+
+    .apply-btn {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .second .navbar-heading{
+        font-size: 2.5rem;  
+        margin-top: -60px;  
+        margin-left: -30px;  
+    }
+
+}
+
+

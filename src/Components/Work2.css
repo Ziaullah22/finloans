@@ -1,0 +1,134 @@
+.work2 {
+    display: flex;
+    padding: 10px; /* Optional: Add padding to the container */
+    font-family: sans-serif;
+}
+.work2 h2{
+    margin-bottom: 60px;
+}
+.row {
+    display: flex;
+    margin-left: 100px;
+    padding: 10px; /* Optional: Add padding to the row */
+    width: 1200px;
+}
+
+.column {
+    padding: 20px;
+}
+
+.picture {
+    flex: 1.3; /* Width of the picture column */
+    margin-left: -112px;
+}
+
+.text {
+    flex: 1; /* Width of the text column */
+    padding-left: 20px;
+    margin-top: -40px;
+}
+.picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: -30px;
+    margin-top: -43px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.arrow {
+    font-size: 1.2em;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: gray;
+}
+
+.answer.show {
+    max-height: 200px; /* Adjust based on content size */
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
+@media (max-width: 1200px) {
+    .row {
+        width: 947px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .row {
+        width: 760px;
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 10px;
+    }
+
+    .picture {
+        flex: 0; /* Hide the picture column */
+        display: none;
+    }
+
+    .text {
+        flex: 1; /* Full width for the text column */
+        padding-left: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .row {
+        padding: 0 5px;
+    }
+
+    .text {
+        padding-left: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 346px) {
+    .work2 {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .row {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 5px;
+    }
+
+    .picture {
+        display: none; /* Ensure picture is not shown on very small screens */
+    }
+
+    .text {
+        padding-left: 0;
+        margin-top: 0;
+    }
+}

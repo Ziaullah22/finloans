@@ -1,0 +1,229 @@
+.offers {
+    margin-top: 100px;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.offers-header h1 {
+    margin: 0;
+}
+
+.blue-line {
+    width: 70px;
+    height: 3px;
+    background-color: #33D4D6;
+    margin: 10px auto;
+}
+
+.offers-description {
+    margin: 10px 0 20px;
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 100px;
+}
+
+.offers-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.offer-item {
+    padding: 20px;
+    width: 27%;
+    border-radius: 2%;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slide-up 0.5s forwards;
+    background: linear-gradient(135deg, #0276be, #45a1ec);
+    color: white;
+    margin-right: -150px;
+    margin-bottom: 20px;
+}
+
+.offers-content .offer-item:last-child {
+    margin-right: 0;
+}
+
+.offer-item i {
+    margin-top: 40px;
+    font-size: 44px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.offer-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.offer-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.offer-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.offers-content p {
+    margin-top: 20px;
+    font-family: sans-serif;
+    color: #33D4D6;
+    font-weight: 500;
+    font-size: 34px;
+}
+
+.white-line {
+    width: 354px;
+    height: 1px;
+    background-color: rgb(223, 218, 218);
+    margin: 10px auto;
+    margin-left: -20px;
+    opacity: 60%;
+}
+
+.offers-content ul {
+    font-family: sans-serif;
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.offers-content ul li {
+    font-family: sans-serif;
+    position: relative;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.offers-content ul li::before {
+    content: '•';
+    position: absolute;
+    left: -20px;
+    color: #33D4D6;
+    font-size: 30px;
+    width: 50px;
+    margin-top: -12px;
+}
+
+.apply-now {
+    font-weight: bold;
+    background-color: #33D4D6;
+    color: white;
+    border: 2px solid #33D4D6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 270px;
+    bottom: -20px;
+    left: 43%;
+    position: relative;
+    transform: translateX(-50%);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.apply-now:hover {
+    background-color: transparent;
+    color: #33D4D6;
+    border-color: #33D4D6;
+}
+
+@keyframes slide-up {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .offer-item {
+        width: 45%;
+        margin-right: 0px;
+    }
+    .white-line {
+        width: auto;
+    }
+    .apply-now {
+        margin-left: -260px;
+        width: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .offer-item {
+        width: 45%;
+        margin-right: 0;
+    }
+    .white-line {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .offers-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apply-now {
+        width: auto;
+        position: static;
+        margin: 0 auto;
+        margin-left: 110px;
+    }
+    .white-line {
+        width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .offers-description {
+        font-size: 14px;
+    }
+
+    .offers-content p {
+        font-size: 28px;
+    }
+
+    .offers-content ul li::before {
+        font-size: 24px;
+    }
+    .white-line {
+        width: auto;
+    }
+}
+
+@media (max-width: 374px) {
+    .offer-item {
+        width: 100%;
+        margin-right: 0;
+        padding: 15px;
+    }
+
+    .offers-content p {
+        font-size: 24px;
+    }
+    .apply-now {
+        width: 40%;
+        padding: 8px 15px;
+        font-size: 14px;
+        margin-right: -80px;
+    }
+
+    .white-line {
+        width: 100px;
+    }
+    .white-line {
+        width: auto;
+    }
+}
